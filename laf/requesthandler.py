@@ -23,13 +23,13 @@ def submit():
 
         is_lost = request.form['is_lost']
 
-        return add_post(title, imagepath, latitude, longitude, phone, keywords, description, is_lost)
+        return add_post(title, imagepath, latitude, longitude,g phone, keywords, description, is_lost)
 
     else:
         error = 'Invalid post request'
     # the code below is executed if the request method
     # was GET or the credentials were invalid
-    return render_template('submit_lost.html', error=error)
+    return render_template('reportform.html', error=error)
  
 
 def phonenum_format(phone_string):
