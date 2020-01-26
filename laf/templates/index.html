@@ -15,7 +15,7 @@
           Lost and Found
         </h1>
         <p class="subtitle">
-          Welcome to <strong>Lost and Found</strong>!
+          Welcome to <strong>Lost and Found</strong>, a distributed service where you can report lost or found items.
         </p>
         
       </div>
@@ -28,48 +28,129 @@
 
     <div id="map"></div>
     <script>
+
+      //there will be a JSON directory inside laf
+
+      var myPin1 =  { "title":"Blue Backpack", "imagepath":"https://cdn1.static-tgdp.com/ui/productimages/approved/std.lang.all/40/96/634096_sized_1800x1200_rev_1.jpg", "phone": 2032199159, "desc": "blue backpack, lost in the big Sayles hall at Brown University", "lost": true, "lat": 41.826771, "lng": -71.402550};
+      var myPin2 = { "title":"Water Bottle", "imagepath":"https://eu.radleylondon.com/media/catalog/product/cache/4/image/1300x/9df78eab33525d08d6e5fb8d27136e95/g/1/g1838464.jpg", "phone": 4079522117, "desc": "water bottle lost in the Brown Chapel", "lost": true, "lat": 41.8267669, "lng": -71.4033895};
+      var myPin3 = { "title":"Mac Laptop", "imagepath":"https://sixcolors.com/images/content/2017/macbook-6c.jpg", "phone": 4032194432, "desc": "Mac laptop lost in Jameson dormitory. I think I lost it in the 3rd floor lounge.", "lost": true, "lat": 41.8239891, "lng": -71.403945};
+      var myPin4 = { "title":"Brown wallet", "imagepath":"https://www.maruse-italy.com/pub/media/catalog/product/cache/57065f9ad685a96f03d5064a860ee112/l/e/leather_wallet_501.jpg", "phone": 1294828842, "desc": "I lost my wallet yesterday in the dining hall. It has my driver's license in it, as well as some sentimental items. Thank you for your help!", "lost": true, "lat": 41.8306, "lng": -71.4024};
+//txtbk
+
       //var map;
       function initMap() {
-        var uluru = {lat: 41.826771, lng: -71.402550};
+        var myLoc = {lat: 41.826771, lng: -71.402550};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
-          center: uluru
+          center: myLoc
         });
 
-        var contentString = '<div id="content">'+
+        var contentString1 = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Lost Cats</h1>'+
-            '<img style="padding: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3h6N93rmdY0kPMsABKkpAjRvgLM1vg15qUtkNs9Ap2_UQi1Qo&s">' +
+            '<h1 id="firstHeading" class="firstHeading"><b>' + myPin1.title + '</b></h1>'+
+            '<img style="padding: 10px; height:200px;" src="' + myPin1.imagepath + '">' +
             '<div id="bodyContent">'+
-            '<p><b>Description: </b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-            'sandstone rock formation in the southern part of the '+
-            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-            'Aboriginal people of the area. It has many springs, waterholes, '+
-            'rock caves and ancient paintings. Uluru is listed as a World '+
-            'Heritage Site.</p>'+
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-            '(last visited June 22, 2009).</p>'+
+            '<p><b>Description: </b>' + myPin1.desc + '</p>'+
+            '<p><b>Contact: </b>' + myPin1.phone + '</p>'+
             '</div>'+
             '</div>';
 
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
+        var infowindow1 = new google.maps.InfoWindow({
+          content: contentString1
         });
 
-        var marker = new google.maps.Marker({
-          position: uluru,
+        pinLoc1 = {lat: myPin1.lat, lng: myPin1.lng};
+        var marker1 = new google.maps.Marker({
+          position: pinLoc1,
           map: map,
-          title: 'Uluru (Ayers Rock)'
+          title: myPin1.title
         });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
+
+        marker1.addListener('click', function() {
+          infowindow1.open(map, marker1);
         });
+
+        var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><b>' + myPin2.title + '</b></h1>'+
+            '<img style="padding: 10px; height:200px;" src="' + myPin2.imagepath + '">' +
+            '<div id="bodyContent">'+
+            '<p><b>Description: </b>' + myPin2.desc + '</p>'+
+            '<p><b>Contact: </b>' + myPin2.phone + '</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content: contentString2
+        });
+
+        pinLoc2 = {lat: myPin2.lat, lng: myPin2.lng};
+        var marker2 = new google.maps.Marker({
+          position: pinLoc2,
+          map: map,
+          title: myPin2.title
+        });
+
+        marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+
+
+        var contentString3 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><b>' + myPin3.title + '</b></h1>'+
+            '<img style="padding: 10px; height:200px;" src="' + myPin3.imagepath + '">' +
+            '<div id="bodyContent">'+
+            '<p><b>Description: </b>' + myPin3.desc + '</p>'+
+            '<p><b>Contact: </b>' + myPin3.phone + '</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow3 = new google.maps.InfoWindow({
+          content: contentString3
+        });
+
+        pinLoc3 = {lat: myPin3.lat, lng: myPin3.lng};
+        var marker3 = new google.maps.Marker({
+          position: pinLoc3,
+          map: map,
+          title: myPin3.title
+        });
+
+        marker3.addListener('click', function() {
+          infowindow3.open(map, marker3);
+        });
+
+        var contentString4 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><b>' + myPin4.title + '</b></h1>'+
+            '<img style="padding: 10px; height:200px;" src="' + myPin4.imagepath + '">' +
+            '<div id="bodyContent">'+
+            '<p><b>Description: </b>' + myPin4.desc + '</p>'+
+            '<p><b>Contact: </b>' + myPin4.phone + '</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow4 = new google.maps.InfoWindow({
+          content: contentString4
+        });
+
+        pinLoc4 = {lat: myPin4.lat, lng: myPin4.lng};
+        var marker4 = new google.maps.Marker({
+          position: pinLoc4,
+          map: map,
+          title: myPin4.title
+        });
+
+        marker4.addListener('click', function() {
+          infowindow4.open(map, marker4);
+        });
+
+        
     }
 
 
