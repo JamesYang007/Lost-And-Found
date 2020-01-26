@@ -19,9 +19,9 @@ def submit():
 
         phone = phonenum_format(request.form['phone'])
 
-        keywords = cobys_function()
+        keywords = cobys_function(img_file)
 
-        description = request.form['username']
+        description = request.form['description']
 
         return add_post(imagepath, latitude, longitude, username, phone, keywords, description)
 
