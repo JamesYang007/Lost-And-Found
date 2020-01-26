@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "brownhacks-266220",
+  "private_key_id": "4456e2346ce7da3056967b2c69a1756d0e1e0d7c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCgcPfIkAVQahbJ\nrtcJWXeW7L7KTZz0oDr3c/pusPrUzSAfhIiJ/uVC9UC9pBkj1VCIN5MSni5mlWaw\nGlQj09GN/vUWx5gjfS6xUyTQcVGWHLk1SoaUH5J6GJ8PCcs4jJ1YMWTBEWFHL5y0\nzOxqGaDiPQOwBmYNz9HLtC47G69iJvBq7BDXd8Nv7gpbVAUslkXixI3CbuU/qK7A\noC+3FLk1hgaX3Wt1trEL/I8+RYqoHltPZQS7jlURNlHkJTSRapjJcM0HLIwjKMPF\nA2NzslJb/uH0IRbWA+rRl7O9+vB1KfoPUke0cyVxi2w4UkSH5BxAlxhJXblAXVXE\nvzcYqLUVAgMBAAECggEAJeP4CMRGlQKxBgmGHF2mOh0IQ/PHdRhgRK99veWLH3Wg\nOAFPU7PAhiswknjuPQG0Rq9FSxjTYYO4IC/fniR4sX28eRhDLGJ0hAlcQOP6Pibj\ncJv8o3+/Upl8+wq3lU/UGw9zOYt2u16ZtjNNRBNwZO2+8LPaJznk1KRlZK05osaq\nrsHfN709CxpTGa1ISd4lxEiqV6BkZhpg0KyZKaHhz7VKktarIhy8iQhzVE8F11Q4\nmv5hUA35ANMRzK/HZYIEADC8MfZysgDuMvIQGQFK6mLhokMw7PUcIuWe/0azcisn\nrF6+FQsApBl5hqNcU6KGNj+wSim8wXfreA++6Fp+wQKBgQDQSh9Kft754z0cDIiP\n2SXNWuJH7OVqmogN6D7iLTH9/FrxCIJzGmkPV6TLzM/8I2RHdicNCQrspRaYBivC\n75duU5sUjn57F9EfWHtO2X+pg02d9h1yN0LGL3zouK7L05gutQRdcuj/kc+s1SN3\nxlFDseZR3eRtqilF0mhM9lwz9QKBgQDFMRMSH3Wq/GwFdKg2OyjTMlsfCM69kQbP\nfNC4T0Zi+M8VU4aSBsTNCQD2jEXxhZxZBBKvawFtH4Re6JvAOeNZqZXFIS4kfPAd\nPDSJF+m8Qvl2hR3ycGRRe1BTs6snfIjS7X8W9ZPg9083qD1ha0Lo89GOl04C1N79\nNxoBi37ooQKBgQCISzhWgtZdJbjjFcB2gF0gFwxijD1CmIPWtdYQIgrIa80GU88o\nimucwnjvcsHV90KzEDlVaklfuFcke0U/dY/dfY/Iz8UrvtX0cO2fFutWfLjZWCbE\niiyDiqdtkQuwDHFUftawX3TfZwZBzeY7heW/KjXP9CZ5LBN9wMTHN5310QKBgBf0\nGyXzbl7D5PdQsXJNA2uMTWdasYpziIlB1zTcZGd3Y+hqSgmJCvUBJ/3LEmABY/mo\nNgDbFcREtNa2mNzj60sj/45/tlQ2XRCgFJ2mqvz0gcs05mth3b3MJfjU9XCJfzFo\nKi0GzdzhDd1r8XDZD7qui4Evvgk4BJJr1Bvl7xehAoGBALtsL/zDSWriWGjSZzs1\nOOQhP4J8fhabmoA6z68C/ex6yHq/RNLad5iu9mWP/zTTsM1Wc4tGUTNXXXuv5B9/\nGoznCsGOvX5pG4CqCcX8CWQDolCJe53tzG1v6cX5wdY6/rpVH8Ssz0SLruNVPFvY\n9UV3zm0PrcEdYUd6L2UWoVs6\n-----END PRIVATE KEY-----\n",
+  "client_email": "brownhacks-image-817@brownhacks-266220.iam.gserviceaccount.com",
+  "client_id": "102891322526550464476",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/brownhacks-image-817%40brownhacks-266220.iam.gserviceaccount.com"
+}
