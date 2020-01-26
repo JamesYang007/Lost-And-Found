@@ -15,15 +15,15 @@ def submit():
         latitude = (g.latlng)[0]
         longitude = (g.latlng)[1]
 
-        username = request.form['username']
-
         phone = phonenum_format(request.form['phone'])
 
         keywords = cobys_function(img_file)
 
         description = request.form['description']
 
-        return add_post(title, imagepath, latitude, longitude, username, phone, keywords, description)
+        is_lost = request.form['is_lost']
+
+        return add_post(title, imagepath, latitude, longitude, phone, keywords, description, is_lost)
 
     else:
         error = 'Invalid post request'
