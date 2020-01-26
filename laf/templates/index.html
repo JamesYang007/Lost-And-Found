@@ -11,9 +11,7 @@
   <body>
     <section class="section">
       <div class="container">
-        <h1 class="title">
-          Lost and Found
-        </h1>
+        <img style="height: 200px" src="laflogo.svg" alt="Lost and Found">
         <p class="subtitle">
           Welcome to <strong>Lost and Found</strong>, a distributed service where you can report lost or found items.
         </p>
@@ -32,7 +30,7 @@
       //there will be a JSON directory inside laf
 
       var myPin1 =  { "title":"Blue Backpack", "imagepath":"https://cdn1.static-tgdp.com/ui/productimages/approved/std.lang.all/40/96/634096_sized_1800x1200_rev_1.jpg", "phone": 2032199159, "desc": "blue backpack, lost in the big Sayles hall at Brown University", "lost": true, "lat": 41.826771, "lng": -71.402550};
-      var myPin2 = { "title":"Water Bottle", "imagepath":"https://eu.radleylondon.com/media/catalog/product/cache/4/image/1300x/9df78eab33525d08d6e5fb8d27136e95/g/1/g1838464.jpg", "phone": 4079522117, "desc": "water bottle lost in the Brown Chapel", "lost": true, "lat": 41.8267669, "lng": -71.4033895};
+      var myPin2 = { "title":"Water Bottle", "imagepath":"https://eu.radleylondon.com/media/catalog/product/cache/4/image/1300x/9df78eab33525d08d6e5fb8d27136e95/g/1/g1838464.jpg", "phone": 4079522117, "desc": "Water bottle found in the Brown Chapel", "lost": true, "lat": 41.8267669, "lng": -71.4033895};
       var myPin3 = { "title":"Mac Laptop", "imagepath":"https://sixcolors.com/images/content/2017/macbook-6c.jpg", "phone": 4032194432, "desc": "Mac laptop lost in Jameson dormitory. I think I lost it in the 3rd floor lounge.", "lost": true, "lat": 41.8239891, "lng": -71.403945};
       var myPin4 = { "title":"Brown wallet", "imagepath":"https://www.maruse-italy.com/pub/media/catalog/product/cache/57065f9ad685a96f03d5064a860ee112/l/e/leather_wallet_501.jpg", "phone": 1294828842, "desc": "I lost my wallet yesterday in the dining hall. It has my driver's license in it, as well as some sentimental items. Thank you for your help!", "lost": true, "lat": 41.8306, "lng": -71.4024};
 //txtbk
@@ -64,7 +62,9 @@
         var marker1 = new google.maps.Marker({
           position: pinLoc1,
           map: map,
-          title: myPin1.title
+          title: myPin1.title,
+          icon: {                             
+            url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"                           }
         });
 
         marker1.addListener('click', function() {
@@ -90,7 +90,9 @@
         var marker2 = new google.maps.Marker({
           position: pinLoc2,
           map: map,
-          title: myPin2.title
+          title: myPin2.title,
+          icon: {                             
+            url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"                           }
         });
 
         marker2.addListener('click', function() {
@@ -117,7 +119,9 @@
         var marker3 = new google.maps.Marker({
           position: pinLoc3,
           map: map,
-          title: myPin3.title
+          title: myPin3.title,
+          icon: {                             
+            url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"                           }
         });
 
         marker3.addListener('click', function() {
@@ -143,7 +147,9 @@
         var marker4 = new google.maps.Marker({
           position: pinLoc4,
           map: map,
-          title: myPin4.title
+          title: myPin4.title,
+          icon: {                             
+            url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"                           }
         });
 
         marker4.addListener('click', function() {
