@@ -7,7 +7,9 @@ def submit():
     error = None
     if request.method == 'POST':
         #need to check info?
-        imagepath = james_method()
+
+        img_file = request.files['img_file']
+        imagepath = process_image(img_file)
 
         g = geocoder.ip('me')
         latitude = (g.latlng)[0]
@@ -21,10 +23,10 @@ def submit():
 
         description = request.form['username']
 
-        return mias_function(imagepath, latitude, longitude, username, phone, keywords, description)
+        return add_post(imagepath, latitude, longitude, username, phone, keywords, description)
 
-        else:
-            error = 'Invalid post request'
+    else:
+        error = 'Invalid post request'
     # the code below is executed if the request method
     # was GET or the credentials were invalid
     return render_template('submit_lost.html', error=error)
