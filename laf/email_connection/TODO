@@ -1,0 +1,5 @@
+- once a user creates a post, they get a uniquely linked email and active link to the post itself sent to their email
+
+- once someone interacts with a post, they get another active link tracked in an array associated with THEIR provided info
+
+- emails sent by users go to their proxy emails (generated via hash function, they can be generated from the unique link
