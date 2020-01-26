@@ -9,98 +9,61 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body id="report-form-page">
-    <div class="field">
-            <h1 class="title">
-                Submit a Lost or Found Item
-            </h1>
-            <label class="label">Name</label>
+    <form>
+        <h1 class="title">
+            Submit a Lost or Found Item
+        </h1>
+        <div class="field">
+            <label class="label">Object</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input">
+            <input name="title" class="input" type="text" placeholder="Name of object">
             </div>
-          </div>
-          
-          <div class="field">
-            <label class="label">Username</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
+        </div>
+        <div class="field">
+                <label class="label">Upload a Photo of the Item</label>
+                <div class="control">
+                <form action="/action_page.php">
+                    <input type="img_file" name="pic" accept="image/*">
+                </form>
             </div>
-            <p class="help is-success">This username is available</p>
-          </div>
-          
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
-              </span>
-            </div>
-            <p class="help is-danger">This email is invalid</p>
-          </div>
-          
-          <div class="field">
-            <label class="label">Subject</label>
+        </div>
+        
+        <div class="field">
+            <label class="label">Lost or Found Item</label>
             <div class="control">
-              <div class="select">
-                <select>
-                  <option>Select dropdown</option>
-                  <option>With options</option>
-                </select>
-              </div>
+            <label class="radio">
+                <input type="radio" name="is_lost" value="true">
+                Lost Item
+            </label>
+            <label class="radio">
+                <input type="radio" name="is_lost" value="false">
+                Found Item
+            </label>
             </div>
-          </div>
-          
-          <div class="field">
-            <label class="label">Message</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
-            </div>
-          </div>
-          
-          <div class="field">
-            <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
-                I agree to the <a href="#">terms and conditions</a>
-              </label>
-            </div>
-          </div>
-          
-          <div class="field">
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question">
-                Yes
-              </label>
-              <label class="radio">
-                <input type="radio" name="question">
-                No
-              </label>
-            </div>
-          </div>
-          
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Submit</button>
-            </div>
-            <div class="control">
-              <button class="button is-link is-light">Cancel</button>
-            </div>
-          </div>
-    <div class="columns">
-      <div class="column">
-          <a href="reportform.html"><button class="button is-large">Report a Lost or Found Item</button></a>
-      </div>
-    </div>
+        </div>
 
+        <div class="field">
+            <label class="label">Phone Number to Contact</label>
+            <div class="control">
+            <input name="phone" class="input" type="text" placeholder="(###)###-####">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Description of Item</label>
+            <div class="control">
+            <textarea name="description" class="textarea" placeholder="Textarea"></textarea>
+            </div>
+        </div>
+        
+        <div class="field is-grouped">
+            <div class="control">
+            <input type="submit" value="Submit" class="button is-link">
+            </div>
+            <div class="control">
+            <button class="button is-link is-light">Cancel</button>
+            </div>
+        </div>
+    </form>
   </body>
 </html>
