@@ -9,3 +9,8 @@ html, body {
     padding: 0;
     text-align: center;
 }
+
+#report-form-page {
+    padding: 20px;
+    text-align: left;
+}
