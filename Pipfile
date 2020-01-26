@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 flask = "*"
 flask_sqlalchemy = "*"
+geocoder = "*"
 
 [requires]
 python_version = "3.7"

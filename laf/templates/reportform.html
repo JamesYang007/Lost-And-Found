@@ -5,11 +5,11 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body id="report-form-page">
-    <form>
+    <form action="/submit" method="post">
         <h1 class="title">
             Submit a Lost or Found Item
         </h1>
@@ -22,9 +22,9 @@
         <div class="field">
                 <label class="label">Upload a Photo of the Item</label>
                 <div class="control">
-                <form action="/action_page.php">
+                <!--form action="/action_page.php"-->
                     <input type="img_file" name="pic" accept="image/*">
-                </form>
+                <!--/form-->
             </div>
         </div>
         
@@ -32,11 +32,11 @@
             <label class="label">Lost or Found Item</label>
             <div class="control">
             <label class="radio">
-                <input type="radio" name="is_lost" value="true">
+                <input type="radio" name="is_lost" value="True">
                 Lost Item
             </label>
             <label class="radio">
-                <input type="radio" name="is_lost" value="false">
+                <input type="radio" name="is_lost" value="False">
                 Found Item
             </label>
             </div>
@@ -46,7 +46,7 @@
             <label class="label">Phone Number to Contact</label>
             <div class="control">
             <input name="phone" class="input" type="text" placeholder="(###)###-####">
-            </div>
+            <div>
         </div>
 
         <div class="field">
