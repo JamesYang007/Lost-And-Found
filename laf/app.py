@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, url_for, flash, request, redirect, send_from_directory
+from werkzeug.utils import secure_filename
 from flask import request
 from flask_sqlalchemy import SQLAlchemy
 import geocoder
@@ -44,13 +45,27 @@ def submit():
     error = None
     if request.method == 'POST':
 
+        uniquepath = imgprocess.process_image(request.files['item_photo'])
+        print(uniquepath)
         params = {
             "title" : request.form['title'],
-            #"imagepath" : imgprocess.process_image(request.files['img_file']),
+            "imagepath" : uniquepath,
             "phone" :  phonenum_format(request.form['phone']),
             "desc" : request.form['description'],
             "lost" : bool(request.form['is_lost'])
         }
+
+        print("entering form fields for-loop")
+        for prop in request.form.items():
+            print(prop)
+
+        print("entering files for-loop")
+        for prop in request.files.items():
+            print(prop)
+
+        f = request.files["item_photo"]
+        print(f)
+        f.save(uniquepath)
 
         # TODO: get ip of requester
         # create another db for latitude and longitude

@@ -7,11 +7,11 @@ IMAGE_PREFIX_DIR = "./images"
 
 # Save file using given filename
 def process_image(fileobj):
-    filepath = os.path.join(IMAGE_PREFIX_DIR, "__tmp" + threading.current_thread().ident + "__")
+    filepath = os.path.join(IMAGE_PREFIX_DIR, "__tmp" + str(threading.current_thread().ident) + "__")
     fileobj.save(filepath)
-    unique_filepath = ''.join([hash_file(filepath), '.jpg'])
+    unique_filepath = IMAGE_PREFIX_DIR + "/" + ''.join([hash_file(filepath), '.jpg'])
     os.rename(filepath, unique_filepath)
-    return unique_filepath
+    return filepath
 
 # MD5 hash file content to name file
 def hash_file(filepath):
