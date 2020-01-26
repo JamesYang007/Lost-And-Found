@@ -19,13 +19,17 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
     imagepath = db.Column(db.String(100))
-    #latitude = db.Column(db.Double)
-    #longitude = db.Column(db.Double)
     #uni = db.Column(db.String(20))
     phone = db.Column(db.String(15)) # should it be String or Integer?
     #keywords = db.Column(db.String(100))
     desc = db.Column(db.String(1000))
     lost = db.Column(db.Boolean)
+
+class Coordinate(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    post_id = db.Column(db.Integer)
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
 
 @app.route('/')
 def index():
@@ -57,6 +61,9 @@ def submit():
         #keywords = cobys_function(img_file)
 
         post = Post(**params)
+
+        # TODO: add Coordinate object with all coordinates
+
         db.session.add(post)
         db.session.commit()
         return render_template('index.html')
