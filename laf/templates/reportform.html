@@ -9,7 +9,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body id="report-form-page">
-    <form action="/submit" method="post">
+    <form action="submit" method="post" enctype="multipart/form-data">
         <h1 class="title">
             Submit a Lost or Found Item
         </h1>
@@ -20,12 +20,8 @@
             </div>
         </div>
         <div class="field">
-                <label class="label">Upload a Photo of the Item</label>
-                <div class="control">
-                <!--form action="/action_page.php"-->
-                    <input type="img_file" name="pic" accept="image/*">
-                <!--/form-->
-            </div>
+            <label class="label">Upload a Photo of the Item</label>
+              <input type="file" name="item_photo">
         </div>
         
         <div class="field">
@@ -58,10 +54,10 @@
         
         <div class="field is-grouped">
             <div class="control">
-            <input type="submit" value="Submit" class="button is-link">
+                <input type="submit" value="Submit" class="button is-link">
             </div>
             <div class="control">
-            <button class="button is-link is-light">Cancel</button>
+                <button class="button is-link is-light">Cancel</button>
             </div>
         </div>
     </form>
