@@ -6,8 +6,8 @@ import geocoder
 def submit():
     error = None
     if request.method == 'POST':
-        #need to check info?
-
+        
+        title = request.files['title']
         img_file = request.files['img_file']
         imagepath = process_image(img_file)
 
@@ -23,7 +23,7 @@ def submit():
 
         description = request.form['description']
 
-        return add_post(imagepath, latitude, longitude, username, phone, keywords, description)
+        return add_post(title, imagepath, latitude, longitude, username, phone, keywords, description)
 
     else:
         error = 'Invalid post request'
